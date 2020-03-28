@@ -25,7 +25,7 @@ SECRET_KEY = 'a6=p_#r&fjb^gxi9#%q+br6qxqr4#!rht^hi3&dgfe)lrb2@5b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,7 +55,8 @@ ROOT_URLCONF = 'django_helloworld.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # this was added to access template base directory globally
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

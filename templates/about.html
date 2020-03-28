@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django | about</title>
+</head>
+<body>
+
+    <center style="padding: 30px 0px 0px 0px;">
+        <h2>This is About Page</h2>
+        <a href="{% url 'home' %}">Go back to home page</a>
+    </center>
+    
+</body>
+</html>
+  
+{% endblock %}
